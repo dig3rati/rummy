@@ -14,4 +14,8 @@ class Player
   def arrange_hand
     
   end
+  
+  def hand_count
+    
+  end
 end

@@ -20,4 +20,14 @@ class Game
     self.joker.wild = true
     self
   end
+  
+  def start_with(name)
+    begin
+      
+    end while (!self.complete?)
+  end
+  
+  def complete?
+    
+  end
 end
