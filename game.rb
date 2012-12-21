@@ -23,11 +23,11 @@ class Game
   
   def start_with(name)
     begin
-      
+      self.board << self.players.first.pick_card(self.deck.cards.pop)
     end while (!self.complete?)
   end
   
   def complete?
-    
+    true
   end
 end

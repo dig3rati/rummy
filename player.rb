@@ -18,4 +18,20 @@ class Player
   def hand_count
     
   end
+  
+  def pick_card(card)
+    self.pick = card
+    self.hand.sort! { |a,b| a.count <=> b.count }
+    if card
+      if card.count < self.hand.last.count
+        popped_card = self.hand.pop
+        self.hand << card
+        return popped_card
+      else
+        return card
+      end
+    else
+      raise Exception.new('Invalid Card')
+    end
+  end
 end
