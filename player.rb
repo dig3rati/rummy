@@ -15,8 +15,8 @@ class Player
     
   end
   
-  def hand_count
-    
+  def count
+    self.hand.map { |c| c.count }.inject(&:+)
   end
   
   def pick_card(card)
